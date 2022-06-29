@@ -18,10 +18,15 @@ const li = document.querySelectorAll(".lang-list");
 
 music.addEventListener("click" , myFunction);
 function myFunction(event){
-    i.classList.add("rotate");
-    music_sec.classList.remove("hide");
-    // error.classList.remove("hide");
+  if(music_sec.classList.contains("hide")){
+  i.classList.add("rotate");
+  music_sec.classList.remove("hide");
+  // error.classList.remove("hide");
+ }else{
+   i.classList.remove("rotate");
+     music_sec.classList.add("hide");
 
+ }
 }
 
 icons.forEach(btn => {
