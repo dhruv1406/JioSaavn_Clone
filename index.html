@@ -5,9 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+
   <title>Clone-JioSaavn</title>
 </head>
 
@@ -33,12 +36,55 @@
 
 
     <ul class="nav_login">
-      <li class="login-list"><a class="login-link" href="#">Music languages</a></li>
+      <li class="login-list-music">
+        <!-- music list dropdown start -->
+        <div class="music">
+          <span class="login-link-music">Music Language</span>
+          <span class="lang">Hindi</span>
+          <i class="arrow fa-solid fa-caret-down"></i>
+        </div>
+        <!-- music list dropdown end -->
+      </li>
       <li class="login-list"><a class="login-link" href="#">Log In</a></li>
       <li class="login-list"><a class="login-link" href="#">Sign Up</a></li>
     </ul>
-
   </header>
+
+<!-- Music List Section Dropdown -->
+
+  <div class="dropdown hide">
+    <div class="music-sec">
+      <p class="bold">What Music do you like?</p>
+      <p class="second">Pick all the languages you want to listen to.</p>
+    </div>
+    <form>
+      <div class="lang-sec">
+        <ul class="lang-sec-col">
+          <li class="lang-list click_btn" >Hindi <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >English <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Punjabi <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Tamil <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Telegu <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Marathi <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Gujarati <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Bengali <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Assamese <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Kannada <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Bhojpuri <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Malayalam <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Urdu <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Haryanvi <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Rajasthani <i class="fa-solid fa-circle-check lang_icon"></i></li>
+          <li class="lang-list" >Odia <i class="fa-solid fa-circle-check lang_icon"></i></li>
+        </ul>
+        <div class="lang-update">
+          <button type="button" class="lang-update_btn" name="button">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- music list section dropdown end -->
 
   <!-- Library section -->
 
@@ -47,11 +93,11 @@
       <h2>LIBRARY</h2>
     </div>
     <ul class="library-lib">
-      <li class="library-list"><a class="lib-list-link" href="#"> <i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
-      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-music"></i> Songs</a></li>
-      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-record-vinyl"></i> Albums</a></li>
-      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-podcast"></i> Podcasts</a></li>
-      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-microphone"></i> Artists</a></li>
+      <li class="library-list"><a class="lib-list-link" href="#"> <i class="fa-solid fa-clock-rotate-left lib-icon" ></i> History</a></li>
+      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-music lib-icon" ></i> Songs</a></li>
+      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-record-vinyl lib-icon" ></i> Albums</a></li>
+      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-podcast lib-icon" ></i> Podcasts</a></li>
+      <li class="library-list"><a class="lib-list-link" href="#"><i class="fa-solid fa-microphone lib-icon" ></i> Artists</a></li>
     </ul>
     <i class="fa-solid fa-music-note"></i>
   </div>
@@ -84,85 +130,7 @@
 
     <!-- Language section caraousal -->
     <section id="language-section">
-      <div id="language-sec" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
 
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">For You</button>
-            </div>
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">Hindi</button>
-            </div>
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">Tamil</button>
-            </div>
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">Telegu</button>
-            </div>
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">English</button>
-            </div>
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">Punjabi</button>
-            </div>
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">Marathi</button>
-            </div>
-
-
-          </div>
-
-          <div class="carousel-item active">
-
-            <div class="language-btn">
-              <button type="submit" name="button">Gujrati</button>
-            </div>
-
-          </div>
-
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#language-sec" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#language-sec" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     </section>
 
 
@@ -215,7 +183,8 @@
       recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
   </div>
 
-  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+  <script src="index.js" charset="utf-8"></script>
 </body>
 
 </html>
